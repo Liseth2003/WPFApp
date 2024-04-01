@@ -28,6 +28,11 @@ namespace WPFApp
             // EJEMPLO: Action y Func
             Action Code = new Action(ShowMessage);
             T = new Task(Code);
+            Task T2 = new Task(delegate
+            {
+                MessageBox.Show("Ejecutando una tarea en un método anónimo.");
+            }
+            );
 
         }
 
@@ -35,5 +40,7 @@ namespace WPFApp
         {
             MessageBox.Show("Ejecutando el método ShowMessage");
         }
+
+
     }
 }
